@@ -1,0 +1,1703 @@
+/*   
+Theme Name: Signature Flight Support
+Description: Responsive Template
+Author: Greteman Group
+Author URI: http://www.gretemangroup.com
+Version: 1.0
+*/
+
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+
+.headSearch div.RadComboBoxDropDown_WebPartsSkin .rcbHeader {background-color:#F5F5F5}
+.headSearch div.RadComboBoxDropDown_WebPartsSkin .rcbHovered {color:#fff;background-color:rgb(97, 158, 241); }
+.headSearch div.RadComboBoxDropDown{background-color:white;}
+.headSearch div.RadComboBox .rcbArrowCell { background-image:none; background-color:inherit; }
+.headSearch div.Search, div.RadComboBoxDropDown_WebPartsSkin {background-color:white; font-size: .8em;}
+.headSearch div.RadComboBox .rcbInput {width:215px;}
+.ResNewButton {float:left; background-image:url("/img/button_new_reservation.png")!important; margin:10px 0px 0px 0px!important; width:124px; height:35px; border:0;}
+#resForm div.RadComboBox_Default .rcbInputCell, .RadComboBox_Default .rcbArrowCell {background-image:none; background-color:white;}
+#resForm div.RadComboBox {margin-top:5px;}
+#resForm .resDiv3ColLt div.RadComboBox_Default {margin-top:0px; height:32px;}
+#resForm div.RadComboBox_Default .rcbArrowCell { background-image:none; background-color:white; }
+#resForm div.RadPicker_Default{padding:5px 0px;}
+div.RadComboBox_Default .rcbDisabled,
+div.RadComboBox_Default .rcbDisabled .rcbReadOnly td {background-color:#EBEBE4!important;}
+div.resResultDiv{padding:10px; margin:20px; font-size:1.6em;}
+span.PRYearListSpan{font-size:1.3em;margin-right:20px;}
+div.homeNewsItem a:link, div.homeNewsItem a:visited, div.homeNewsItem a:active {color:#222;}
+div.latestNews a:link, div.latestNews a:visited, div.latestNews a:active {color:#222;}
+div.latestNews a:hover, div.homeNewsItem a:hover { /*text-decoration:underline; color:#71a3f3;*/ }
+div.flex-video {
+    position: relative;    
+    padding-bottom: 56.25%; /* 16/9 ratio */   
+    padding-top: 30px; /* IE6 workaround*/   
+    height: 0;    
+    overflow: hidden;
+}
+div.flex-video iframe,
+div.flex-video object,
+div.flex-video embed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+div.projekktor ui {list-style-type:none;}
+
+div.sfContentBlock ul {
+    padding-left:3em;
+    margin-bottom:1em;    
+}
+
+.locationTime{
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:65px;
+    font-weight:500;
+    margin:0px auto 20px;
+    text-align:center;
+    line-height:1.1;
+    color:#333;
+}
+
+html, button, input, select, textarea { color: #222; }
+
+html body { 
+  font-size: 1em ; 
+  line-height: 1.4; 
+  background-color:#2e2e2e; 
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  padding:0;
+  min-width:1px;
+}
+
+.homeNewsItem a { color:#222; }
+
+body p, div.sfContentBlock p { margin:0 0 1em 0; }
+
+body a:link, body a:visited, body a:focus { color:#71a3f3; text-decoration: none; }
+body a:hover { color:black; text-decoration: none; }
+
+/* Remove text-shadow in selection highlight */
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+::selection { background: #b3d4fc; text-shadow: none; }
+
+/* A better looking default horizontal rule */
+body hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* Remove the gap between images and the container bottoms */
+body img { vertical-align: middle; }
+
+/* Remove default fieldset styles. */
+body fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Allow only vertical resizing of textareas. */
+body textarea { resize: vertical; }
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+body h1, div.sfContentBlock h1 { font-size: 2em; margin: 0 0 0.67em 0; font-weight: normal; }
+body h2, div.sfContentBlock h2 { font-size: 1.5em; line-height:1.2em; margin: 0 0 0 0; font-weight: normal; }
+body h3, div.sfContentBlock h3 { font-size: 1.17em; margin: 0 0 1em 0; font-weight: normal; border:0; }
+body h4, div.sfContentBlock h4 { font-size: 1em; margin: 0 0 1.33em 0; font-weight: normal; }
+body h5, div.sfContentBlock h5 { font-size: 0.83em; margin: 0 0 1.67em 0; font-weight: normal; }
+body h6, div.sfContentBlock h6 { font-size: 0.67em; margin: 0 0 2.33em 0; font-weight: normal; }
+
+div.sfContentBlock h1, div.sfContentBlock h2, div.sfContentBlock h3, div.sfContentBlock h4, div.sfContentBlock h5 {line-height:1.4;}
+
+/* ~~ MOBILE NAV ~~ */
+.mobNavSection { 
+  border-bottom:1px solid #DDD;
+}
+
+.mobNavSection a, div.mobNavSection a { 
+  display: inline-block;
+  color:#2e2e2e;
+  padding: 12px 15px 10px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  width:50%;
+}
+
+.mobNavSection div a { display:block; }
+
+.dropdownDiv, div.dropdownDiv { display:none; }
+.dropdownDiv a, div.dropdownDiv a { color:#FFF; }
+.dropButn { 
+	display:inline-block;
+	color:#2e2e2e;
+	width:10%;
+	text-align:right;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Image replacement */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Mighty Clearfix */
+.clearfix:before,
+.clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+.col1 { color:#71a3f3; } /* Blue */
+.col2 { color:#2e2e2e; } /* Dk Gray */
+.col3 { color:#eeeeee; } /* Lt Gray */
+.white { color:#FFFFFF; }
+.black { color:#000000; }
+
+
+.col1Bk { background-color:#71a3f3; } /* Blue */
+.col2Bk { background-color:#2e2e2e; } /* Dk Gray */
+.col3Bk { background-color:#eeeeee; } /* Lt Gray */
+.col4Bk { background-color:#828282; } /* Mid Gray */
+.col5Bk { background-color:#cf002c; } /* Red */
+.whiteBk { background-color:#FFFFFF; }
+.blackBk { background-color:#000000; }
+
+
+
+
+/* ==========================================================================
+   Reusable Classes - Shadows, shims, etc.
+   ========================================================================== */
+.innerShadow {
+   -moz-box-shadow:    inset 0 0 15px rgba(0,0,0,0.6);
+   -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.6);
+   box-shadow:         inset 0 0 15px rgba(0,0,0,0.6);
+}
+
+/* Typography */
+.textRight { text-align: right; }
+.textCenter { text-align:center; }
+.textLeft { text-align:left; }
+
+.text13 { font-size: 13px; line-height: 22px; }
+.font70 { font-size:70px; }
+
+.whiteLnks a:link, .whiteLnks a:focus, .whiteLnks a:visited { color:white; }
+
+/* Shims */
+.marTop75 { margin-top:75px; }
+.marTop50 { margin-top:50px; }
+.marTop25 { margin-top:25px; }
+.marTop15 { margin-top:15px; }
+.marTop15Mob { margin-top:15px; }
+
+.marBot75 { margin-bottom:75px; }
+.marBot50 { margin-bottom:50px; }
+.marBot25 { margin-bottom:25px; }
+.marBot15 { margin-bottom:15px; }
+
+.padBot25 { padding-bottom:25px; }
+.padBot100 { padding-bottom:100px; }
+.padHor10 { padding-left:10px;padding-right:10px; }
+.padHor10Mob { padding-left:10px;padding-right:10px; }
+
+.marLeft20 { margin-left: 20px; }
+
+.blueHead { 
+  font-size: 32px; 
+  margin:0 0 0 5%; 
+  padding:10px 0 
+}
+
+/* Reusable column setup for the grid */
+.col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+/* ==========  Turn off divs not needed in mobile ========== */
+.hideInMob { display:none; }
+.hideUnder640 { display:none; } 
+
+/* ==========================================================================
+   MOBILE FIRST STYLES
+   ========================================================================== */
+
+/* ~~ THE GRID ~~ */
+.col { margin-left:1%; padding:0 0%; }
+
+.row { margin-left:0px; }
+
+.row .col { margin-left:0; }
+
+.span_0, .spacerDiv { width:0; }
+.span_1, .hamburger { width:15.8333333333%; }
+.span_2 { width:32.6666666667%; }
+.span_3 { width:49.5%; }
+.span_4 { width:66.3333333333%; }
+.span_5 { width:83.1666666667%; }
+.headbar { width:99%; }
+.span_6,
+.homeTopButtons,
+.homeLatest,
+.locationDiv,
+.tailwinsDiv,
+.tailwinsText,
+.mobileFooter,
+.mobileFooterLinks,
+.mobileFooterCopyright,
+.alert,
+.fullWidth,
+.serviceImage,
+.empImage,
+.serviceSidebar,
+.serviceCopy,
+.serviceCTA,
+.serviceCTA2,
+.realestateHead,
+.realestateInfo,
+.serviceStatusContainer,
+.socialImage,
+.neswroomContainer { margin-left:0; width:100%; }
+
+/* ~~ END GRID ~~ */
+
+
+/* ~~ BASIC STRUCTURE ELEMENTS ~~ */
+.container100 { width:100%; }
+.innerContainer { width:99%; padding:0; margin:0; }
+
+.floatR { float:right; }
+.floatL { float:left; }
+
+.contentDiv { top:0; }
+
+/* ~~ FORMS ~~ */
+
+/* ~~ HEADER ~~ */
+body header { width:100%; margin:0 auto; }
+body header a:link, header a:visited, header a:focus { color:white; text-decoration: none; }
+body header a:hover { color:#71a3f3; }
+.headbar { padding:5px 0; }
+.headLogoDiv { margin-top:10px;float:right;width:60%;min-width:150px; }
+.headMySig img { width:65px;padding-left:2px; }
+.headMySig span { font-size:.6em; }
+.mySignatureLogin { text-align:right; }
+.mySignatureLogin .headSearch { text-align:left; }
+.alert { width:100%;background-color:#cf002c;color:#f4ef00;position:relative;padding:10px 0px; }
+.alert p { margin:0; }
+.loginPopup { 
+	z-index:999999999;
+	right:0;
+	top:28px;
+	position:absolute;
+	width:280px;
+	height:170px;
+	padding:60px 60px 40px 60px;
+	text-align:left;
+	font-size:12px;
+	background-color:#DFDFDF;
+	box-shadow: 2px 5px 5px rgba(46, 46, 46, 0.75);
+}
+.loginTriangle { position:absolute;top:0;left:80%; }
+.loginTriangle img { width:70%;margin-top:-5px; }
+#loginButton, #loginButtonm { 
+	margin-top:10px;
+	float:right;
+	border:0;
+	width:75px;
+	height:35px;
+	background:url('/img/login.jpg');
+}
+.homeform { width:98%;padding:4px 1%;border:0; }
+
+/* ~~ Navigation ~~ */
+
+.navigationDiv li { font-size:.8em;  }
+.mobNavHolder { 
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  padding-top: 3px;
+  background-color:#eeeeee;
+  min-height:1200px;
+  z-index:1;
+ }
+.dropDownDiv a {  
+  display: inline-block;
+  color:white;
+  padding: 12px 15px 10px 15px;
+  font-size: 13px;
+}
+.hamburger { z-index:99999;float:left;color:#FFF;margin:15px 0px 0px 10px;min-width:35px; }
+
+/* ~~ MIDDLE SECTIONS ~~ */
+.homeTopPhoto { background:none; }
+.homeTopButtonsMob a { width:50%; float:left; }
+.blueBarTitle h1 { margin:0 0 0 5%;padding:10px 0; }
+
+.mobileFooter,
+.mobileFooterLinks,
+.mobileFooterCopyright { width:90%; margin-left:5%; }
+
+.homeLatest { padding:10px 5%; }
+.locationDivTitle { padding:10px 5%; }
+.locationDiv { padding:10px 5%; }
+.tailwinsDivTitle { padding:10px 5%; }
+.tailwinsText { padding:10px 5%; }
+.tailwinsDiv { padding:10px 5%; }
+
+.tailwinsDiv { position:absolute; }
+.tailwinsText {  }
+.tailwinsSpacer { height:180px; }
+
+.selectImageUrl { background:url('/img/services-signature-select.jpg'); }
+.maintenanceImageUrl { background:url('/img/services-maintenance.jpg'); }
+.tailwinsImageUrl { background:url('/img/tailwins_image.jpg'); }
+.aviationcardImageUrl { background:url('/img/aviation_card_hero.jpg'); }
+.overviewImageUrl { background:url('/img/about_overview_hero.jpg'); }
+.statusImageUrl { background:url('/img/signature_status_hero.jpg'); }
+.employmentImageUrl { background:url('/img/photo_employment.jpg'); }
+.socialImageUrl { background:url('/img/social_responsibility_hero.jpg'); }
+.bbaAviationImageUrl { background:url('/img/bba_aviation_hero.jpg'); }
+
+.serviceImage { height:200px;background-size:cover; }
+.empImage { height:200px;background-size:cover; }
+.socialImage { height:200px;background-size:cover; }
+
+.selectSidebar { text-align:center; }
+.selectSidebar div, .selectSidebar div.sfContentBlock div { text-align:left; padding:7px 0px; border-top:1px solid #ccc; }
+.selectSidebar div.sfContentBlock {text-align:inherit; padding:inherit; border-top:inherit;}
+
+.serviceSidebar { padding:10px 5%; }
+.sidebarTitle, div.sfContentBlock p.sidebarTitle { font-size:16px;margin:0; }
+.sidebarCopy { font-size:.8em; }
+.serviceSidebarDiv3 { max-width:175px;border:0;margin:25px auto 0px; }
+div.sfContentBlock div.serviceSidebarDiv3 p, .serviceSidebarDiv3 p { margin:0;padding:0; }
+
+.serviceCopy, .serviceCopy2, .serviceStatusCopy { padding:10px 5%; }
+.serviceCopy2 img { width:100%; }
+.serviceCopy p { font-size:.9em; }
+.serviceCTA, .serviceCTA2 { padding:10px 5%; 
+                            /*text-align:center;*/ }
+.serviceCTA { text-align:right; }
+.serviceCTA2 { text-align:center; }
+.serviceCTA div, .serviceCTA2 div, .serviceMaintCTA div { margin:0 auto;text-align:left;font-size:.8em;padding:10px 0px;border-bottom:1px solid #DDD; }
+.serviceCTA div { max-width:230px; }
+
+.realestateHead { width:90%;padding:10px 5%;margin:25px 0px; }
+.realestateLoc { 
+  float:left; 
+  padding:10px 0%; 
+  width:100%; 
+  padding-top:25px; 
+  border-top:1px solid #DDD; 
+}
+.realestateLocInt { margin:0 5%; }
+
+.realestatePhoto, .realestateInfo { width:100%; max-width:295px; }
+.realestateInfo h3 { font-size:40px;margin:0; }
+.realestateInfo h4 { font-size:25px;margin:0;padding-bottom:10px; }
+.serviceCopy ul, .serviceCopy2 ul { margin:0 0 0 -25px; }
+
+.serviceMaintCopy, .serviceMaintCTA { padding:10px 5%; }
+/*.serviceMaintCTA img { width:100%;max-width:230px; }*/
+.serviceStatusCopy { float:left; }
+.serviceStatusWidget { float:left; width:100%; min-height:750px; }
+.bbaLogos { float:left;width:90%;text-align:center; padding:10px 5%; }
+.serviceStatusWidget h2, .serviceStatusWidget p { padding:10px 5%; }
+
+.statusVideo { display:none; }
+.statusVideoMobile { margin:0 auto; }
+
+.widget { position:absolute;width:100%; font-size:.7em; }
+.widgetSelectorTable { width:100%;border:1px solid #ccc;border-bottom:0px;margin-bottom:-1px;z-index:99; }
+.widgetSelector { cursor:pointer;color:#cadefe;padding:20px 25px;border:3px solid #FFF;border-bottom:0px;text-align:center; }
+.widgetSelected { color:#2e2e2e; }
+.widget td { 
+	background-color:#EEE;
+	border: 3px solid #FFF;
+	padding:6px 10px;
+}
+.widgetBodyTD {
+	width:20%;
+	font-size:.8em;
+	text-align:center;
+	line-height:1.1em;
+}
+
+.newsroomContainer { padding: 10px 5%; } 
+.newsroomContent { padding:45px 0; }
+.newsroomContent, .newsroomSidebar { float:left; width:100%; }
+.newsroomSidebar { background-color:#EEE; padding:45px 0; font-size:.8em; }
+.newsroomSidebar .sfContentBlock div { width:80%; max-width:218px;margin: 0 auto 15px; }
+.newsroomSidebar p, .newsroomSidebar .sfContentBlock p, .newsroomSidebar h4, .newsroomSidebar .sfContentBlock h4  { margin:0;padding:0; }
+
+.newsroomSidebar img { width:100%; max-width:218px; }
+.latestNews { padding:15px 0; border-bottom:1px solid #CCC; }
+.latestNews h4, .latestNews p { padding:0;margin:0; }
+
+.selectionCopy { padding-left:25px; }
+
+.employLt {	margin: 0px 5% !important; padding: 0px; width: 90%; border-right-color: rgb(217, 217, 217); border-right-width: 0px; border-right-style: solid; float: none;}
+.employRt {	margin: 0px 5% !important; width: 90%; float: none;}
+/*.employButnHead { margin: 50px auto 0px; border: 0px solid gray !important; max-width: 100%;}
+.employButnHead p {	text-align: center;}*/
+.employButnHead { margin: 50px auto 0px; border: 0px solid gray !important; text-align: left; max-width: 150px;}
+.employButnHead p {	text-align: left;}
+
+/* ~~ Home Page ~~ */
+.homeBigHead { font-size: 40px; margin:0; font-weight: lighter; }
+.homeSurvey { 
+  width:100%;
+  font-size:20px;
+  padding:21px 0;
+  margin-top:25px;
+  border-top:1px solid #cacbcc;
+  border-bottom:1px solid #cacbcc;
+}
+.homeSurvey a:link, .homeSurvey a:focus, .homeSurvey a:visited { color:#71a3f3; }
+.homeSurvey a:hover { color:#2e2e2e; }
+
+.homeNewsItem { padding:10px 0; border-bottom:1px solid #cacbcc; }
+.homeNewsItem p { margin:0; }
+.homeNewsItem a:hover { color:#71a3f3; }
+.topBorder { border-top:1px solid #cacbcc; }
+
+.aphoto { display:none;position:absolute;z-index:1;overflow:hidden;height:300px;width:100%; }
+.aphoto1 { background:url('/img/Homepage-Image-3.jpg'); }
+.aphoto2 { background:url('/img/Homepage-Image-2.jpg'); }
+.aphoto3 { background:url('/img/Homepage-Image-1.jpg'); }
+.aphoto { background-position:-800px 0px; }
+
+.homeTailwinsLoc {
+  margin-top:20px;
+  border-top:1px solid #cacbcc;
+  border-bottom:1px solid #cacbcc;
+  z-index:9;
+}
+
+.homeTailwinsLocDet {
+  float:left;
+  width:33%;
+  margin: 10px 0px;
+}
+
+.homeTailwinsLocDet span { clear:both; }
+.deskMiddle { display:none; }
+.tailwinsLocTitle { font-size:40px; }
+.mobMiddleMySig { margin-top:300px; }
+
+/* ~~ Locations ~~ */
+.locHead { 
+  font-size: 32px; 
+  display:inline-block; 
+  margin:0; 
+  padding:10px 0 10px 20px; 
+}
+
+.locHeadContainer { display: none; }
+.locContainer { display: none; }
+
+.locMobBack { margin-top:10px; padding-left:20px; }
+.locMobRegion span { 
+  font-size: 18px; 
+  line-height: 19px; 
+  margin:12px 7px 10px 7px;
+  padding:0;
+}
+.locMobRegion a:link, .locMobRegion a:visited, .locMobRegion a:focus { color:white; }
+.locMobAlpha { margin-top:23px; padding-left:12px;  }
+
+.locButnDiv { 
+  width:31%; 
+  background-color:#71a3f3;
+  color:white; 
+  padding:10px 0;
+  font-size:9px;
+  text-align:center;
+  margin:0 0 15px 0; 
+}
+.locButnDiv:hover { background-color:#2e2e2e; }
+.locButnDiv p { margin:0; padding:0 8px; }
+
+.locLtCol { padding:20px 0 0 0; }
+
+.locMidCol { padding:100px 0 0 20px; width:35%; }
+
+.locFeaturesL { width:47%; margin-right:4%; }
+.locFeaturesR { width:47%; }
+
+.locRtCol {	padding: 20px 0px; left: -25%; width: 150%; }
+/*.locRtCol { padding:20px 0 20px 0; width:230px; }*/
+
+.locInfoDiv { float:left; width:65%; margin:0 5% 0 0; }
+
+.locLineBottom { border-bottom:1px solid #bababa; }
+
+.mobNavLocFBOSide { border-bottom:1px solid #bababa; width:100%; }
+
+.mobNavLocFBOSide span { 
+  display: inline-block;
+  color:#2e2e2e;
+  padding: 8px 15px 5px 15px;
+  font-size: 15px;
+  width:65%;
+}
+
+.iconSpanLocNav {
+  position: absolute;
+  top:22px;
+  right:20px;
+  height:12px;
+  width: 12px;
+  background:transparent url(/img/iconSprite.png) no-repeat;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.iconSpanFBOSide {
+  position: absolute;
+  top:13px;
+  right:15px;
+  height:12px;
+  width: 12px;
+  background:transparent url(/img/iconSprite.png) no-repeat;
+  cursor: pointer;
+  z-index: 5;
+}
+
+
+/* ~~ Contact ~~ */
+.contactLt { float:left;width:90%; margin:20px 5% 0 5%; }
+.contactRt { float:left;width:100%; margin:0 0 20px 0; }
+.contactRtForm { padding:40px 20px 0 20px; }
+
+.contactMobButns { z-index: 100; }
+
+.contactMobButns div { 
+  width:49.75%;
+  color:white; 
+  padding:15px 0 0 0;
+  font-size:15px;
+  text-align:center;
+  cursor:pointer;
+  margin:0 0 0 0;
+}
+
+#contactForm input { 
+  width:100%;
+  border:none;
+  margin:5px 0 0 0;
+  padding:5px 0;
+  height:22px;
+  color:#000000;
+  font:normal 12px Arial, Helvetica, sans-serif;
+  text-indent: 8px;
+}
+
+#contactForm textarea { 
+  width:100%;
+  border:none;
+  margin:5px 0 0 0;
+  padding:10px 0 0 0;
+  height:80px;
+  color:#000000;
+  font:normal 12px Arial, Helvetica, sans-serif;
+  text-indent: 8px;
+}
+
+#contactForm .submitButn {
+  float:right;
+  width:80px;
+  height:35px;
+  padding:0 0 0 0;
+  background-color:#5982d5;
+  color:white;
+  font-size: 13px;
+  margin: 15px 0 0 0;
+}
+
+
+/* ~~ Additional Pages - Privacy, Terms, etc. ~~ */
+.narrowCol { width: 90%; padding:20px 0; margin:0 auto 0 auto; }
+
+
+
+/* Mobile Location Nav */
+
+.pointer { cursor: pointer; }
+
+.subheadInBox { 
+  font-size:20px;
+  line-height:21px;
+  padding:15px 0 7px 0;
+  margin:0;
+  width: 90%;
+}
+
+.iconSpan {
+  position: absolute;
+  top:15px;
+  left:70%;
+  height:12px;
+  width: 12px;
+  background:transparent url(/img/iconSprite.png) no-repeat;
+  cursor: pointer;
+}
+
+.plusSign { background-position: center center; }
+.minusSign { background-position: center bottom; }
+.forward { background-position: center top; }
+
+.mobNavLoc { border-bottom:1px solid #FFF; width:100%; }
+
+.mobNavLoc span { 
+  display: inline-block;
+  color:#2e2e2e;
+  padding: 17px 15px 11px 20px;
+  font-size: 18px;
+  width:75%;
+}
+
+.mobNavLocDrop { border-top:1px solid #bababa; }
+/* ~~ END Mobile Location Nav ~~ */
+
+.resImageUrl {
+	background: url("/img/photo_reservations.jpg");
+}
+.resImage {
+	background-position: top; background-size: cover;
+}
+.resDivLt {
+	margin: 25px 0px 25px 4%; width: 92%;
+}
+.resDivLt p {
+	margin: 12px 0px 3px; font-size: 13px;
+}
+.resDivRt {
+	margin: 0px 0px 25px 4%; width: 92%;
+}
+.resDivRt p {
+	margin: 12px 0px 3px; font-size: 13px;
+}
+.resDiv2ColLt {
+	margin: 0px 0px 5px; width: 100%; float: left; background-color: white;
+}
+.resDiv2ColLt input {
+	margin: 0px !important;
+}
+.resDiv2ColRt {
+	margin: 0px 0px 5px; width: 100%; float: right; background-color: white;
+}
+.resDiv2ColRt input {
+	margin: 0px !important;
+}
+.resDiv3ColLt {
+	margin: 0px 0px 5px; width: 100%; float: left; background-color: white;
+}
+.resDiv3ColLt input {
+	margin: 0px !important;
+}
+.resDiv3ColMd {
+	margin: 0px 0px 5px; width: 100%; float: left; background-color: white;
+}
+.resDiv3ColMd input {
+	margin: 0px !important;
+}
+.resDiv3ColRt {
+	margin: 0px 0px 5px; width: 100%; float: right; background-color: white;
+}
+.resDiv3ColRt input {
+	margin: 0px !important;
+}
+.resInputIcon {
+	top: 8px; right: 7px; position: absolute;
+}
+#editFormDiv {
+	/*display: none;*/
+}
+.editDivInt {
+	margin: 0px auto; padding: 50px 0px 100px; width: 80%;
+}
+.resDeskNav {
+	display: block;
+}
+.resMobNav {
+	width: 100%; height: 87px; margin-top: 0px;
+}
+.newResPosition {
+	background: url("/img/sprite_newRes.png"); left: 0px; top: 307px; width: 168px; height: 87px; position: absolute; z-index: 10; cursor: pointer;
+}
+.editResPosition {
+	background: url("/img/sprite_editRes.png"); left: 171px; top: 307px; width: 229px; height: 87px; position: absolute; z-index: 10; cursor: pointer;
+}
+.resSpriteTop {
+	background-position: bottom;
+}
+.resSpriteBot {
+	background-position: top;
+}
+#resForm input[type=text] {
+	font: 12px/normal Arial, Helvetica, sans-serif; margin: 5px 0px 0px; padding: 5px 0px; border: currentColor; width: 100%; height: 22px; color: rgb(0, 0, 0); text-indent: 8px; font-size-adjust: none; font-stretch: normal;
+}
+#editForm input[type=text] {
+	font: 12px/normal Arial, Helvetica, sans-serif; margin: 5px 0px 0px; padding: 5px 0px; border: currentColor; width: 100%; height: 22px; color: rgb(0, 0, 0); text-indent: 8px; font-size-adjust: none; font-stretch: normal;
+}
+.textFieldWithIcon {
+	width: 80% !important;
+}
+#resForm textarea {
+	font: 12px/normal Arial, Helvetica, sans-serif; margin: 0px; padding: 10px 0px 0px; border: currentColor; width: 100%; height: 80px; color: rgb(0, 0, 0); text-indent: 8px; font-size-adjust: none; font-stretch: normal;
+}
+#resForm input[type=submit] {
+	background: url("/img/butn_resSubmit.gif"); border: 0px currentColor; width: 124px; height: 35px; margin-top: 10px; float: right;
+}
+#editForm input[type=submit] {
+	background: url("/img/button_edit_reservation.png"); border: 0px currentColor; width: 124px; height: 35px; margin-top: 10px; float: right;
+}
+
+/* ~~ FOOTER ~~ */
+footer { width:100%; margin:0 auto; font-size: 12px; }
+footer a:link, footer a:visited, footer a:focus { color:white; text-decoration: none; }
+footer a:hover { color:#71a3f3; }
+footer ul { padding:0; margin: 0; }
+footer ul li { list-style-type: none; }
+
+.mobileFooter { text-align:center; }
+.mobileFooter li {
+	width:25%;
+	float:left;
+}
+
+.footerLinks, .footerlinks a, .mobileFooterLinks, .mobileFooterLinks a { color:#FFF; }
+
+.SigStatAc{margin-top:20px;}
+
+/* ==========================================================================
+   481px (Sizes past mobile) Media Queries for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 481px) {
+
+  .padHor10Mob { padding-left:0px;padding-right:0px; }
+  .marTop15Mob { margin-top:0px; }
+  
+  .hideInMob { display:block; }
+  .deskMiddle { display:block; }
+  /* ~~ BASIC STRUCTURE ELEMENTS ~~ */
+  .innerContainer { width:100%; max-width: 1440px; margin:0 auto; }
+  .contentDiv { width:100%; max-width:1440px; margin:0 auto; }
+
+  /* ~~ THE GRID ~~ */
+  .col { margin-left:1%; padding:0 0%; } 
+  .row .col { margin-left:1%; }
+  
+  .span_0 { width:0; }
+  .span_1, .spacerDiv { width:6%; }
+  .span_2 { width:15.8333333333%; }
+  .span_3,
+  .homeButtonSpacer,
+  .serviceSidebar,
+  .serviceMaintCTA  { width:24.25%; }
+  .span_4,
+  .homeLatest,
+  .locImage,
+  .tailwinsText,
+  .serviceCTA,  
+  .serviceMaintCopy,
+  .serviceCopy2 { width:32.6666666667%; }
+  .span_5,
+  .homeTopButtons,
+  .homeLeftText,
+  .locationDiv,
+  .tailwinsDiv,
+  .mySignatureLogin,
+  .locMidLeft,
+  .locMidRight,
+  .headbar { width:41.0833333333%; }
+  .span_6,
+  .serviceCTA2,  
+  .serviceCopy { width:49.5%; }
+  .span_7,
+  .serviceImage { width:57.9166666667%; }
+  .empImage { width:57.9166666667%; }
+  .span_8 { width:66.3333333333%; }
+  .span_9{ width:74.75%; }
+  .span_10,
+  .locationDivTitle,
+  .tailwinsDivTitle,
+  .alertCopy,
+  .fullWidth,
+  .navigationDiv,
+  .footerMap,
+  .realestateContainer,
+  .serviceStatusContainer,
+  .socialImage,
+  .newsroomContainer { width:83.1666666667%; }
+  .span_11 { width:91.5833333333%; }
+  .span_12{ margin-left:0; width:100%; }
+  /* ~~ END GRID ~~ */
+
+
+  /* ~~ HEADER ~~ */
+  body header { width:100%; margin:25px auto 0px auto; }
+
+  .headLogoDiv { margin-top:0px; float:none; width:162px; padding-bottom: 20px; }
+  .headMySig { margin: 8px 0px; }
+  .headMySig span {  }
+  
+  .headSearch {
+    width:132px;
+    border:0px solid #000000;
+    margin:0 0 0 0;
+    /*background:white url(/img/icon_search.gif) no-repeat;-->*/
+    background-position: 203px 6px;
+  }
+
+  #searchForm input {
+    border:none;
+    margin:0;
+    padding:2px 0;
+    height:22px;
+    width:100px;
+    color:#666666;
+    font:normal 12px Arial, Helvetica, sans-serif;
+    text-indent: 8px;
+  }
+  
+
+  /* ******   BEGIN DESKTOP/TABLET NAVIGATION   ****** */
+  #nav, #nav ul { /* all lists */
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    list-style: none;
+    line-height: 1;
+    z-index: 20;
+  }
+
+  #nav a { /* Top level */
+    display: block;
+    width: auto;
+    margin: 0 20px 0 0;
+    color: white;
+  }
+  #nav a:hover { color:#71a3f3; }
+
+  #nav li a { padding:0 0 5px 0;margin-right:10px; }
+
+  #nav li { /* all list items */
+    float: left;
+    width: auto; /* width needed or else Opera goes nuts */
+  }
+
+  /* second-level lists */
+  #nav li ul {
+    position: absolute;
+    background: #4D4D4D;
+    width: auto;
+    padding-bottom: 20px;
+    left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+  }
+
+  #nav li ul li { display:block; clear: both; }
+
+  #nav li ul li a { padding:20px 20px 0 20px; color:white; font-weight: normal; }
+  #nav li ul li a:hover { color:#71a3f3; }
+
+  #nav li:hover ul { /* lists nested under hovered list items */
+    left: auto;
+	box-shadow: 2px 2px 5px rgba(46, 46, 46, 0.75);
+  }
+  
+  /* ******   END DESKTOP/TABLET NAVIGATION   ****** */
+
+
+
+  /* ~~ MIDDLE SECTIONS ~~ */
+  .blueHead { 
+    font-size: 48px; 
+    margin:0 0 0 0; 
+    padding:10px 0 
+  }
+
+  .blueBarTitle h1 { margin:0 0 0 0;padding:10px 0; }
+  
+  /* ~~ Home Page ~~ */
+  .homeTopPhoto {
+	background-color:#EEE;
+    min-height: 400px;
+  }
+  .aphoto1, .aphoto2, .aphoto3  {
+    background-position: -680px 0px;
+  }
+  .aphoto { height:100%; }
+  
+  .homeTopButtons img { display: block; padding-bottom:5px; }
+
+  .homeTopButtons a { 
+	float:none;
+	width:auto;
+  }
+  .deskMiddle { display:block; z-index:2; }
+  .tailwinsDiv { position:relative; }
+  .tailwinsText { margin-top:0px; }
+  .signatureSignup { display:none; }
+
+  /* ~~ Locations ~~ */
+  .locLtCol { padding:20px 0 0 0; }
+
+  .locMidCol { padding:100px 0 0 20px; width:100%; }
+  .locFeaturesL { width:100%; }
+  .locFeaturesR { width:100%; }
+
+  .locCategories li img { display:none; }
+  .locCategories li:hover img {
+    position: absolute;
+    top:135px;
+    margin-left:15px;
+    display:block;
+    z-index:10;
+  }
+
+  .locSingleCategories li img {
+	display: none;
+}
+.locSingleCategories li:hover img {
+	top: 135px; margin-left: 15px; display: block; position: absolute; z-index: 10;
+}
+.locSingleCategories {
+	padding-left: 0px !important; display: block;
+}
+.locSingleCategories li {
+	display: inline-block;
+}
+.locSingleCategories li a:link {
+	padding: 0px 15px 0px 0px; color: white; font-size: 15px; font-weight: bold;
+}
+.locSingleCategories li a:visited {
+	padding: 0px 15px 0px 0px; color: white; font-size: 15px; font-weight: bold;
+}
+.locSingleCategories li a:focus {
+	padding: 0px 15px 0px 0px; color: white; font-size: 15px; font-weight: bold;
+}
+.locSingleCategories li a:hover {
+	color: rgb(46, 46, 46);
+}
+
+  #forecast_embed {
+    position: absolute;
+    top: -40px;
+  }
+
+  .serviceStatusWidget { min-height:650px; }
+
+  /* ~~ Additional Pages - Privacy, Terms, etc. ~~ */
+  .narrowCol { width: 95%; padding:25px 0; margin:0 0 0 0; }
+
+  /* ~~ FOOTER ~~ */
+  footer {
+    color:white;
+    width:100%; margin:50px auto 50px auto;
+  }
+  .footerMap { display:none; }
+  .mobFooter { display:block; }
+  
+  .footNav a { margin-right:20px; }
+  footer ul { margin-bottom:10px; }
+  .footerCol { width:24%; margin-left:1%; }
+  .footSocial li { margin-bottom:6px; }
+  .footSocial img { padding-right:5px; }
+
+  /* ==========  Turn off divs not needed in tablet/desktop ========== */
+  .hideInDesk { display:none; }
+
+  .serviceImage { min-height:375px; background-position:-200px 0px; }
+  .empImage { min-height:375px; background-position:-400px 0px; }
+  .socialImage { min-height:375px; }
+  .serviceSidebar { position:absolute;right:9%;min-height:375px; padding:10px; }
+  .serviceSidebar div, .serviceSidebar div.sfContentBlock div { font-size:.7em; }
+  .serviceSidebar div.sfContentBlock {font-size:1em;}
+  .sidebarCopy, .sfContentBlock p.sidebarCopy { font-size:1em;margin:0;font-weight:800; }
+  .serviceCTA { margin-top:35px; }
+  .serviceCTA2 div { width:96%;margin:0;padding-left:4%; }
+  .serviceCopy ul, .serviceCopy2 ul, .serviceMaintCopy ul { margin:0 0 0 -25px;font-size:.9em; }
+  .serviceStatusCopy { width:100%; padding:0; }
+  .serviceStatusWidget h2, .serviceStatusWidget p { width:100%; padding:0; }
+  .serviceSidebarDiv3 { margin:120px auto 0px; }
+
+  .realestateHead { width:100%; padding:0; }
+  .realestateLoc { 
+    width:100%;
+    padding:0 0 20px 0;
+    margin:0; 
+    padding-top:10px; 
+    border-top:none; 
+  }
+  .realestateLocInt { margin:0 0; }
+  .realestatePhoto { float:left; width:40%; }
+  .realestateInfo { float:left; width:55%; margin-left:5%; }
+  .realestateInfo h3 { line-height:20px; font-size:25px; }
+  .realestateInfo h4 { font-size:15px;}
+  .realestateInfo p { font-size:.75em; }
+  
+  .employLt {
+	margin: 0px !important; padding: 0px 4% 0px 0px; width: 65%; border-right-color: rgb(217, 217, 217); border-right-width: 1px; border-right-style: solid; float: left;
+}
+.employRt {
+	margin: 0px !important; width: 30%; float: right;
+}
+.employButnHead {
+	margin: 50px auto 0px; border: 0px solid gray !important; text-align: left; max-width: 150px;
+}
+.employButnHead p {
+	text-align: left;
+}
+
+
+}
+
+/* ==========================================================================
+   530px
+   ========================================================================== */
+@media only screen and (min-width:530px)
+{
+.resDivLt {
+	margin: 25px 0px 25px 4%; width: 40%;
+}
+.resDivLt p {
+	margin: 12px 0px 3px; font-size: 13px;
+}
+.resDivRt {
+	margin: 25px 0px 25px 7%; width: 45%;
+}
+.resDivRt p {
+	margin: 12px 0px 3px; font-size: 13px;
+}
+.resDiv2ColLt {
+	margin: 0px 0px 5px; width: 100%; float: left; background-color: white;
+}
+.resDiv2ColLt input {
+	margin: 0px !important;
+}
+.resDiv2ColRt {
+	margin: 0px 0px 5px; width: 100%; float: right; background-color: white;
+}
+.resDiv2ColRt input {
+	margin: 0px !important;
+}
+.resDiv3ColLt {
+	width: 100%; float: left;
+}
+.resDiv3ColMd {
+	width: 100%; margin-left: 0%; float: left;
+}
+.resDiv3ColRt {
+	width: 100%; float: right;
+}
+.resInputIcon {
+	top: 8px; right: 7px; position: absolute;
+}
+}
+
+
+/* ==========================================================================
+   650px (Desktop) Media Query for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 650px) {
+
+  .narrowCol { width: 75%; padding:50px 0; margin:0 0 0 0; }
+
+  .contactLt { float:left;width:45%; margin:25px 5% 75px 0; }
+  .contactRt { float:right;width:50%; margin:0 0 0 0; }
+  .contactRtForm { padding:40px 20px 0 20px; }
+
+}
+
+
+
+/* ==========================================================================
+   720px (Sizes past mobile) Media Queries for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 720px) {
+
+  /* 
+    Added this to your block, this is where the header breaks so it fit well. I bumped
+    your pixel width from 710px to 720px as well since the My Signature broke at 715px
+    - Seth
+  */
+  .headMySig { display:block; }
+  
+  /* ~~ THE GRID ~~ */
+  .span_0 { width:0; }
+  .span_1, .spacerDiv { width:6%; }
+  .span_2,
+  .serviceSidebar { width:15.8333333333%; }
+  .span_3,
+  .serviceMaintCTA { width:24.25%; }
+  .span_4 { width:32.666666667%; }
+  .span_5,
+  .homeTopButtons,
+  .locMidLeft,
+  .locMidRight,
+  .serviceMaintCopy { width:41.0833333333%; }
+  .span_6 { width:49.5%; }
+  .span_7 { width:57.9166666667%; }
+  .span_8,
+  .serviceImage { width:66.3333333333%; }
+  .empImage { width:66.3333333333%; }
+  .span_9 { width:74.75%; }
+  .span_10, .fullWidth { width:83.1666666667%; }
+  .span_11 { width:91.5833333333%; }
+  .span_12 { margin-left:0; width:100%; }
+  /* ~~ END GRID ~~ */
+
+  #nav li a { padding:10px 0 15px 0;margin-right:20px; }
+  
+  .locHeadContainerMob { display: none }
+  .locHeadContainer { display: block; }
+  .locContainer { min-height:500px; display: block; }
+  .locHead { 
+    font-size: 48px; 
+    display:inline-block; 
+    margin:0; 
+    padding:15px 0 0 0; 
+  }
+
+  .locCategories { display:inline-block; padding-left:0!important; }
+  .locCategories li { display: inline-block; }
+  .locCategories li a:link, .locCategories li a:visited, .locCategories li a:focus { 
+    color:white;
+    font-weight: bold;
+    font-size:15px;
+    padding:0 15px 0 0;
+  }
+  .locCategories li a:hover { color:#2e2e2e; }
+
+  .locTriangleUS { position:absolute;top:0;left:265px; }
+
+  .locTableKey { 
+    font-size: 12px;
+    padding:0 0 20px;
+  }
+
+  .locTableKey span { display:inline-block; margin-right: 15px; }
+
+
+  .locTable { display:block; width:100%; border-collapse: collapse; }
+
+  .locTable tr { color:#2e2e2e; border-bottom:1px solid #2e2e2e; }
+
+  .locTable thead tr td, .locTable thead tr th { padding:0 15px 10px; line-height: 12px; }
+  .locTable thead tr th { font-weight:bold; }
+  .locTable tbody tr td { padding:8px 15px; }
+
+  .locTable tbody tr:hover {
+    background-color:#71a3f3;
+    color:white;
+    cursor: pointer;
+  }
+
+  .locTable td, .locTable th { font-size: 12px; }
+
+  .locTableC1 { width: 9%; }
+  .locTableC2 { width: 9%; }
+  .locTableC3 { width: 14%; }
+  .locTableC3a { display:none; }
+  .locTableC4 { width: 16%; }
+  .locTableC5 { min-width:14px; width: 1%; padding:0; }
+  .locTableC6 { width: 51%; }
+  .locTableC7 { display:none; }
+  .locTableC8 { display:none; }
+  .locTableC9 { display:none; }
+
+  .nonUSLoc .locTableC1 { width: 7%; }
+  .nonUSLoc .locTableC2 { width: 11%; }
+  .nonUSLoc .locTableC3 { width: 11%; }
+  .nonUSLoc .locTableC3a { display:table-cell; width: 12%; }
+  .nonUSLoc .locTableC4 { width: 8%; }
+  .nonUSLoc .locTableC5 { min-width:14px; width: 1%; padding:0; }
+  .nonUSLoc .locTableC6 { width: 50%; }
+  .nonUSLoc .locTableC7 { display:none; }
+  .nonUSLoc .locTableC8 { display:none; }
+  .nonUSLoc .locTableC9 { display:none; }
+
+  .realestateInfo h3 { line-height:30px; font-size:35px; }
+  .realestateInfo h4 { font-size:25px;}
+  .realestateInfo p { font-size:.8em; }
+  
+  .newsroomContent { width:55%; padding-right:10%; }
+  .newsroomSidebar { width:35%; font-size:.75em; }
+  .locButnDiv {	font-size: 12px;}
+}
+
+
+/* ==========================================================================
+   780px (iPad Vertical) Media Queries for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 780px) {
+
+	.footerCol { width:14%; margin-right:5%; }
+	.navigationDiv li { padding-right:15px; font-size:1em; }
+
+}
+
+
+/* ==========================================================================
+   830px (Sizes past mobile) Media Queries for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 830px) {
+  .locCategories { display: block; padding-left:0!important; }
+  .serviceImage { background-position:-100px 0px; }
+  .empImage { background-position:-100px 0px; }
+  
+  .locTableC1 { width: 7%; }
+  .locTableC2 { width: 10%; }
+  .locTableC3 { width: 10%; }
+  .locTableC3a { display:none; }
+  .locTableC4 { width: 10%; }
+  .locTableC5 { min-width:16px; width: 1%; padding:0; }
+  .locTableC6 { width: 45%; }
+  .locTableC7 { display:table-cell; width: 17%; }
+  .locTableC8 { display:none; }
+  .locTableC9 { display:none; }
+
+  .nonUSLoc .locTableC1 { width: 7%; }
+  .nonUSLoc .locTableC2 { width: 10%; }
+  .nonUSLoc .locTableC3 { width: 10%; }
+  .nonUSLoc .locTableC3a { display:table-cell; width: 10%; }
+  .nonUSLoc .locTableC4 { width: 8%; }
+  .nonUSLoc .locTableC5 { min-width:16px; width: 1%; padding:0; }
+  .nonUSLoc .locTableC6 { width: 39%; }
+  .nonUSLoc .locTableC7 { display:table-cell; width: 15%; }
+  .nonUSLoc .locTableC8 { display:none; }
+  .nonUSLoc .locTableC9 { display:none; }
+
+  .locRtCol {	padding: 20px 0px; left: 0px; width: 96%;}
+}
+
+
+/* ==========================================================================
+   950px 
+   ========================================================================== */
+@media only screen and (min-width:950px)
+{
+.resDivLt {
+	margin: 25px 0px 25px 4%; width: 40%;
+}
+.resDivLt p {
+	margin: 12px 0px 3px; font-size: 13px;
+}
+.resDivRt {
+	margin: 25px 0px 25px 7%; width: 45%;
+}
+.resDivRt p {
+	margin: 12px 0px 3px; font-size: 13px;
+}
+.resDiv2ColLt {
+	margin: 0px 0px 5px; width: 49.5%; float: left; background-color: white;
+}
+.resDiv2ColLt input {
+	margin: 0px !important;
+}
+.resDiv2ColRt {
+	margin: 0px 0px 5px; width: 49.5%; float: right; background-color: white;
+}
+.resDiv2ColRt input {
+	margin: 0px !important;
+}
+.resDiv3ColLt {
+	width: 32.66%; float: left;
+}
+.resDiv3ColMd {
+	width: 32.66%; margin-left: 1%; float: left;
+}
+.resDiv3ColRt {
+	width: 32.66%; float: right;
+}
+.resInputIcon {
+	top: 8px; right: 7px; position: absolute;
+}
+.resInputAdj {
+	margin-top: -6px;
+}
+.editDivInt {
+	margin: 0px auto; padding: 100px 0px 350px; width: 30%;
+}
+}
+
+
+/* ==========================================================================
+   980px (Desktop) Media Query for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 980px) {
+
+  /*.locMidCol { padding:100px 0 0 20px; width:45%; }*/
+
+  .contactLt { float:left;width:45%; margin:25px 5% 75px 0; }
+  .contactRt { float:left;width:40%; margin:0 75px 75px 0; }
+  .contactRtForm { padding:60px 40px 0 40px; }
+
+}
+
+
+
+
+/* ==========================================================================
+   1024px (iPad Horizontal) Media Queries for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 1024px) {
+
+  
+  /* ~~ THE GRID ~~ */
+  .span_0 { width:0; }
+  .span_1, .spacerDiv { width:6%; }
+  .span_2,
+  .serviceSidebar,
+  .serviceCTA { width:15.8333333333%; }
+  .span_3,
+  .locMidLeft,
+  .serviceCTA2 { width:24.25%; }
+  .span_4 { width:32.666666667%; }
+  .span_5,
+  .homeTopButtons,
+  .serviceCopy { width:41.0833333333%; }
+  .span_6 { width:49.5%; }
+  .span_7,
+  .locMidRight { width:57.9166666667%; }
+  .span_8,
+  .serviceImage { width:66.3333333333%; }
+  .empImage { width:66.3333333333%; }
+  .span_9 { width:74.75%; }
+  .span_10, .fullWidth { width:83.1666666667%; }
+  .span_11 { width:91.5833333333%; }
+  .span_12 { margin-left:0; width:100%; }
+  /* ~~ END GRID ~~ */
+  
+  /* ~~ MIDDLE SECTIONS ~~ */
+
+  /* ~~ Locations ~~ */
+  .locCategories { display: block; padding-left:0!important; }
+
+  .locTableC1 { width: 7%; }
+  .locTableC2 { width: 9%; }
+  .locTableC3 { width: 9%; }
+  .locTableC3a { display: none; }
+  .locTableC4 { width: 9%; }
+  .locTableC5 { min-width:18px; width: 1%; padding:0; }
+  .locTableC6 { width: 31%; }
+  .locTableC7 { width: 17%; }
+  .locTableC8 { display:table-cell; width: 17%; }
+  .locTableC9 { display:none; }
+
+  .nonUSLoc .locTableC1 { width: 6%; }
+  .nonUSLoc .locTableC2 { width: 9%; }
+  .nonUSLoc .locTableC3 { width: 9%; }
+  .nonUSLoc .locTableC3a { display:table-cell; width: 9%; }
+  .nonUSLoc .locTableC4 { width: 7%; }
+  .nonUSLoc .locTableC5 { min-width:18px; width: 1%; padding:0; }
+  .nonUSLoc .locTableC6 { width: 29%; }
+  .nonUSLoc .locTableC7 { display:table-cell; width: 15%; }
+  .nonUSLoc .locTableC8 { display:table-cell; width: 15%; }
+  .nonUSLoc .locTableC9 { display:none; }
+
+
+  .locMidCol { padding:100px 0 0 20px; width:50%; }
+
+  .locFeaturesL { width:100%; }
+  .locFeaturesR { width:100%; }
+  
+  /* ~~ Real Estate ~~ */
+  .realestateHead { width:65%; }
+  .realestateLoc { width:47%;margin-right:1%;}
+  .realestateInfo h3 { line-height:20px; font-size:25px; }
+  .realestateInfo h4 { font-size:15px;}
+  .realestateInfo p { font-size:.7em; }
+  
+  .serviceStatusCopy { width:45%;padding-right:5%; }
+  .serviceStatusWidget { width:50%;min-height:800px; }
+  .bbaLogos { width:50%; text-align:right; padding:0; }
+  .statusVideo { display:block; }
+  .statusVideoMobile { display:none; }
+  
+  .locRtCol {	padding: 20px 0px; left: 0px; width: 230px;}
+
+}
+
+
+
+
+
+/* ==========================================================================
+   1200px (Desktop) Media Query for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 1200px) {
+
+  .locMidCol { padding:100px 0 0 20px; width:60%; }
+
+  .locFeaturesL { width:100%; }
+  .locFeaturesR { width:100%; }
+
+  .newsroomContent { width:65%; padding-right:10%; }
+  .newsroomSidebar { width:25%; font-size:.9em; }
+}
+
+
+
+
+
+/* ==========================================================================
+   1440px (Desktop) Media Query for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 1440px) {
+
+  /* ~~ HEADER ~~ */
+  header {  }
+
+  /* ~~ Navigation ~~ */
+
+
+
+  /* ~~ MIDDLE SECTIONS ~~ */
+
+  /* ~~ Home Page ~~ */
+
+
+  /* ~~ Locations ~~ */
+  .locHead { 
+    font-size: 48px; 
+    display:inline-block; 
+    margin:0; 
+    padding:15px 0 15px 0; 
+  }
+
+  .locCategories { display: inline-block; padding-left:30px!important; }
+
+  .locCategories li a:link { 
+    color:white;
+    font-weight: bold;
+    font-size:18px;
+    padding:0 20px 0 0;
+  }
+
+  .locCategories li a:hover { color:#2e2e2e; }
+
+  .locTableC1 { display:table-cell; width: 8%; }
+  .locTableC2 { display:table-cell; width: 7%; }
+  .locTableC3 { display:table-cell; width: 7%; }
+  .locTableC3a { display:none; }
+  .locTableC4 { display:table-cell; width: 10%; }
+  .locTableC5 { min-width:21px; display:table-cell; width: 1%; padding:0; }
+  .locTableC6 { display:table-cell; width: 29%; }
+  .locTableC7 { display:table-cell; width: 13%; }
+  .locTableC8 { display:table-cell; width: 13%; }
+  .locTableC9 { display:table-cell; width: 12%; }
+
+  .nonUSLoc .locTableC1 { width: 6%; }
+  .nonUSLoc .locTableC2 { width: 7%; }
+  .nonUSLoc .locTableC3 { width: 7%; }
+  .nonUSLoc .locTableC3a { display:table-cell; width: 7%; }
+  .nonUSLoc .locTableC4 { width: 6%; }
+  .nonUSLoc .locTableC5 { min-width:21px; width: 1%; padding:0; }
+  .nonUSLoc .locTableC6 { width: 32%; }
+  .nonUSLoc .locTableC7 { display:table-cell; width: 13%; }
+  .nonUSLoc .locTableC8 { display:table-cell; width: 13%; }
+  .nonUSLoc .locTableC9 { display:table-cell; width: 8%; }
+
+  .locMidCol { padding:100px 0 0 20px; width:67%; }
+
+  .locFeaturesL { width:47%; margin-right:4%; }
+  .locFeaturesR { width:47%; }
+
+  .locCategories li img { display:none; }
+  .locCategories li:hover img {
+    position: absolute;
+    top:95px;
+    margin-left:15px;
+    display:block;
+    z-index:10;
+  }
+  .locSingleCategories {
+	padding-left: 30px !important; display: inline-block;
+}
+  .locSingleCategories li a:link {
+	padding: 0px 20px 0px 0px; color: white; font-size: 18px; font-weight: bold;
+}
+.locCategories li a:hover {
+	color: rgb(46, 46, 46);
+}
+.locSingleCategories li a:hover {
+	color: rgb(46, 46, 46);
+}
+.locSingleCategories li img {
+	display: none;
+}
+.locSingleCategories li:hover img {
+	top: 95px; margin-left: 15px; display: block; position: absolute; z-index: 10;
+}
+
+  /* ~~ Real Estate ~~ */
+  .realestatePhoto { float:left; width:45%; }
+  .realestateInfo { float:left; width:50%; margin-left:5%; }
+  .realestateInfo h3 { line-height:30px; font-size:35px; }
+  .realestateInfo h4 { font-size:20px;}
+  .realestateInfo p { font-size:.8em; }
+
+  /* ~~ FOOTER ~~ */
+  footer { 
+    width:100%; 
+  }
+
+}
+
+/* FOR SMALL ADJUSTMENTS */
+
+@media only screen and (min-width: 640px) {
+	.signatureSignup { display:block; position:absolute; right:60px; width:122px;}
+	.headMySig img { width:75px;padding-left:10px; }
+    .headSearch { width:225px; }
+	.aphoto { background-position: -600px 0px; }
+	#searchForm input {
+		border:none;
+		margin:0;
+		padding:3px 0;
+		height:28px;
+		width:160px;
+		color:#666666;
+		font:normal 12px Arial, Helvetica, sans-serif;
+		text-indent: 12px;
+	}
+	.headSearch { background-position: 203px 10px; }
+	.loginPopup { top:30px; }
+	.loginTriangle { left:75%; }
+	.loginTriangle img { width:78%;margin-top:-2px; }
+	.footerMap { display:block; }
+	.mobFooter { display:none; }
+	.hideUnder640 { display:block; }
+    .footerSocialIcons { display:none; }
+	.widget { font-size:.8em; }
+}
+@media only screen and (min-width: 800px) {
+	.font20 { font-size:50px; }
+	.headMySig img { width:80px; }
+	.headMySig span { font-size:.7em;padding-right:10px; }
+	.aphoto { background-position: -600px 0px; }
+	.signatureSignup { width:162px;right:80px; }
+	.loginPopup { top:33px; }
+	.loginTriangle { left:72%; }
+	.loginTriangle img { width:100%; }
+	.widget { font-size:.9	em; }
+}
+@media only screen and (min-width: 1024px) {
+	.aphoto{ background-position: -400px 0px; }
+	.signatureSignup { right:100px; }
+}
+@media only screen and (min-width: 1280px) {
+  .serviceImage { background-position:0px 0px; }
+  .empImage { background-position:0px 0px; }
+	.font20 { font-size:60px; }
+	.headMySig { margin: 8px 0 20px; }
+	.headMySig img { width:109px; }
+	.headMySig span { font-size:1em; }
+	.loginPopup { top:43px; }
+	.loginTriangle { left:65%; }
+	.signatureSignup { right:110px; }
+}
+@media only screen and (min-width: 1440px) {
+	.font20 { font-size:70px; }
+	.aphoto { background-position: 0px 0px; }
+	.signatureSignup { right:120px; }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}

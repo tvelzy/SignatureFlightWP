@@ -1,0 +1,67 @@
+.headNumber {width:260px;}
+.hideMob {width:380px;}
+.headbar { width:width:41.0833333333%; }
+.headMySig span { float:left; }
+.headMySig a { float:left; }
+.headMySig a { width:109px;margin-left:5px; }
+.homeTopPhoto { z-index:-501;height:400px; }
+.loginPopup { padding-top:25px; }
+.loginTriangle { display:none; }
+.signatureSignup { display:inline-block;left:-50; }
+#searchBox { line-height:40px;display:inline;box-sizing:content-box;padding:20px; }
+.locTableKey span { width:205px; }
+.locTableKey span img { margin-right:5px; }
+.serviceSidebar { padding:0px 10px !important; }
+
+
+@media only screen and (min-width: 480px) {
+
+	/* ~~ FORMS ~~ */
+	.headSearch { 
+		float:left;
+		width:190px;
+		border:1px solid #5982d5;
+		margin:0 15px 0 0;
+		background:transparent url(../img/search_button.gif) no-repeat;
+		background-position: 165px 8px;
+	}
+
+	/* ~~ Home Page ~~ */
+	.homeTop { margin-bottom: 12px; }
+
+	.homePadding { margin-top:12px; padding-bottom:35px; }
+
+	.hideHomeBigPhoto { display:block; }
+	.homeMedPhoto { display:none; }
+
+	.homePhotoRt {
+		width:29.25%;
+		position:absolute; 
+		bottom:0; 
+		right:0;
+	}
+
+	.homeDropDiv { 
+		float:right;
+		width:29.25%;
+		margin-left:1%;
+		border-bottom:12px solid white;
+		min-height:100px;
+		z-index:3;
+	}
+
+	.homeDropDivForm {
+		position:absolute;
+		top:0;
+		right:0;
+		width:29.25%;
+		margin-left:1%;
+		margin-bottom:12px;
+		display:none;
+		z-index:4;
+	}
+
+	.homeLtWidePhoto { width:69.5%; }
+	
+
+}
