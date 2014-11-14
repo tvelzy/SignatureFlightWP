@@ -1,0 +1,94 @@
+﻿.RadAjaxPanel
+{
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:2%;
+}
+
+.RadGrid
+{
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:2%;
+}
+
+.MyInfoHeader
+{
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.MyInfoDiv
+{
+	height: 1px;
+	background-color: #333333;
+	margin-bottom: 10px;
+}
+
+.clear
+{
+	clear:both;    
+	height: 0px;
+}
+
+.MyInfoLeftCol
+{
+    font-size: medium;
+	float:left;
+	width: 250px;
+	margin-bottom: 5px;
+	font-weight:bold;
+}
+
+.MyInfoRightCol
+{
+	float:right;
+	margin-bottom: 5px;
+}
+
+.MyInfoWrapper
+{
+	margin-bottom: 15px;
+	font-family: Times New Roman;
+	font-size: large;
+	font-style: inherit;
+	font-weight: bolder;
+}
+
+.MyInfoWrapperLeftCol
+{
+	float:left;
+	margin-left: 5px;
+}
+
+.MyInfoWrapperRightCol
+{
+	float:right;
+	width: 200px;
+}
+
+.adminlogout
+{
+    text-align: right;
+    padding: 10px;
+}
+
+.Body {	
+	 background-color: SlateGray
+}
+
+.AdminHeader
+{ 
+  font-size: x-large;
+  font-style:inherit;
+  font-weight: bolder;
+  font-family: Times New Roman; 
+}
+
+.AdminSectionHeader {
+  font-size: large;
+  font-style:inherit;
+  font-weight: bolder;
+  font-family: Times New Roman; 
+  margin-top: pxpx;  	
+}

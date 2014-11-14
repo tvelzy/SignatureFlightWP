@@ -1,0 +1,104 @@
+.text13 { font-size: 13px; line-height: 22px; }
+
+.locButnDiv { 
+	color:white; 
+	padding:10px 0;
+	font-size:12px;
+	text-align:center;
+	margin:0 0 15px 0;
+}
+
+.locLtCol { padding:20px 0 0 0; }
+
+.locMidCol { padding:100px 0 0 20px; width:65%; }
+
+.locFeaturesL { width:47%; margin-right:4%; }
+.locFeaturesR { width:47%; }
+
+.locRtCol { padding:20px 0 20px 0; width:230px; }
+
+.locInfoDiv { float:left; width:65%; margin:0 5% 0 0; }
+
+.locLineBottom { border-bottom:1px solid #bababa; }
+
+.mobNavLocFBOSide { border-bottom:1px solid #bababa; width:100%; }
+
+.mobNavLocFBOSide span { 
+  display: inline-block;
+  color:#2e2e2e;
+  padding: 8px 15px 5px 15px;
+  font-size: 15px;
+  width:65%;
+}
+
+.iconSpanFBOSide {
+  position: absolute;
+  top:13px;
+  right:15px;
+  height:12px;
+  width: 12px;
+  background:transparent url(../img/iconSprite.png) no-repeat;
+  cursor: pointer;
+  z-index: 5;
+}
+
+
+.plusSign { background-position: center center; }
+.minusSign { background-position: center bottom; }
+.forward { background-position: center top; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   481px (Desktop) Media Query for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 481px) {
+
+	.locLtCol { padding:20px 0 0 0; }
+
+	.locMidCol { padding:100px 0 0 20px; width:52%; }
+	.locFeaturesL { width:100%; }
+	.locFeaturesR { width:100%; }
+
+}
+
+/* ==========================================================================
+   1024px (Desktop) Media Query for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 1024px) {
+
+	.locMidCol { padding:100px 0 0 20px; width:52%; }
+	.locFeaturesL { width:100%; }
+	.locFeaturesR { width:100%; }
+
+}
+
+/* ==========================================================================
+   1440px (Desktop) Media Query for Responsive Design.
+   ========================================================================== */
+@media only screen and (min-width: 1440px) {
+
+	.locMidCol { padding:100px 0 0 20px; width:65%; }
+
+	.locFeaturesL { width:47%; margin-right:4%; }
+	.locFeaturesR { width:47%; }
+
+}

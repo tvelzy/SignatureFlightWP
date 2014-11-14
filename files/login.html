@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Signature Flight Support</title>
+<script>
+
+function submitAction(){
+      var link = document.location.href;
+      var searchString = "redirect=";
+      var equalIndex = link.indexOf(searchString);
+      var redirectUrl = "";
+
+      if (document.forms[0].action == "") {
+      var url = window.location.href;
+      var args = new Object();
+      var query = location.search.substring(1);
+      var pairs = query.split("&");
+          for(var i=0;i<pairs.length;i++){
+              var pos = pairs[i].indexOf('=');
+              if(pos == -1) continue;
+              var argname = pairs[i].substring(0,pos);
+              var value = pairs[i].substring(pos+1);
+              args[argname] = unescape(value);
+          }
+          document.forms[0].action = args.switch_url;       
+      }       
+      if(equalIndex >= 0) {
+            equalIndex += searchString.length;
+            redirectUrl = "";
+            redirectUrl += link.substring(equalIndex);
+      }
+      if(redirectUrl.length > 255)
+      redirectUrl = redirectUrl.substring(0,255);
+      document.forms[0].redirect_url.value = redirectUrl;
+      document.forms[0].buttonClicked.value = 4;
+      document.forms[0].submit();
+}
+
+function reject()
+{
+	alert("You will not be able to access the system!");
+}
+
+
+function loadAction(){
+      var url = window.location.href;
+      var args = new Object();
+      var query = location.search.substring(1);
+      var pairs = query.split("&");
+      for(var i=0;i<pairs.length;i++){
+          var pos = pairs[i].indexOf('=');
+          if(pos == -1) continue;
+          var argname = pairs[i].substring(0,pos);
+          var value = pairs[i].substring(pos+1);
+          args[argname] = unescape(value);
+      }
+      document.forms[0].action = args.switch_url;
+
+}
+
+</script>
+
+<style>
+.headlineLoc{width:100%;color:#63a3ee;line-height:37px;overflow:visible;padding:0;font-family:Arial, sans-serif;font-size:35px; margin-bottom:25px;}
+</style>
+
+</head>
+
+<body style="background-color: #000; color: #fff; margin-top: 50px;" onload="loadAction();"> 
+<form method="post"> <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0"> <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE=""> <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
+<div style="padding:10px; width: 100%;">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+<tr><td style="text-align: center">
+<a href="/"><img src="/img/SFS_Logo_Black.jpg" style="border: 0px;"/></a><br/><br/>
+<div class="headlineLoc">Wireless Access</div>
+<div style="font-family: Arial, Helvetica, sans-serif; text-align: left; width: 800px; height: 275px; overflow: auto;">
+<p><b>Accessing Signature Flight Support&#8217;s Public Network From Your Wireless Device</b></p>
+Signature Flight Support provides Internet access points at no charge in selected areas for guests with portable computers or devices capable of receiving wireless signals. You will be able to access the Internet from your wireless device when sitting within range of an access point. Guests are expected to use the wireless access in a legal and responsible manner. By using this wireless access network, the user acknowledges that he/she is subject to, and agrees to abide by all laws, and all state and federal rules and regulations applicable to Internet use.
+<p><b>Terms and Conditions of Use</b></p>
+Guests will need a notebook/laptop computer or other device equipped with a wireless card that supports the WiFi standard.
+<br>Signature Flight Support assumes no responsibility for the safety of equipment.</br>
+<p><b>Security Considerations</b></p>
+Wireless access is by nature an insecure medium. As with most guest wireless networks, any information being sent or received over 
+Signature Flight Support wireless network could potentially be intercepted by another wireless user. Cautious and informed wireless users should not transmit their credit card information, passwords and any other sensitive personal information while using a wireless "hot spot".<p>
+Anyone using the Signature Flight Support wireless network is forewarned that there can be no expectation of privacy when using the wireless network. Users assume all associated risks and agree to hold harmless 
+Signature Flight Support and its employees for any personal information (e.g. credit card) that is compromised, or for any damage caused to users' hardware or software due to electric surges, security issues or consequences caused by viruses or hacking. All wireless access users should have up-to-date virus protection on their personal laptop computers or wireless devices, as well as staying up-to-date with applicable OS security patches.
+<p><b>Disclaimer</b></p>
+Signature Flight Support is providing wireless connectivity in this facility as a guest service and offers no guarantees that any use of the wireless connection is in any way secure, or that any privacy can be protected when using this wireless connection. Use of this wireless connection is entirely at the risk of the user, and the Company is not responsible for any loss of any information that may arise from the use of the wireless connection, or for any loss, injury, or damages resulting from the use of the wireless connection.<p>
+<p><b>Agreement</b></p>
+By entering "I agree" below, you are entering into a binding agreement.
+</div>
+<p style="text-align: center"><input type="button" name="Submit" value="Accept" class="button" onclick="submitAction();">
+&nbsp;<input type="button" name="Reject" value="Reject" class="button" onclick="reject();"></p>
+</td>
+</tr>
+</table>
+</div>
+</form>
+
+</body>
+</html>
