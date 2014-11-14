@@ -8,20 +8,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SignatureFlightWP", "http:/
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_7066"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Source\Repos\SignatureFlightWP\"
+		Debug.AspNetCompiler.PhysicalPath = "..\SignatureFlightWP\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7066\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_7066"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Source\Repos\SignatureFlightWP\"
+		Release.AspNetCompiler.PhysicalPath = "..\SignatureFlightWP\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7066\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\Source\Repos\SignatureFlightWP\"
+		SlnRelativePath = "..\SignatureFlightWP\"
 	EndProjectSection
 EndProject
 Global
